@@ -1,5 +1,5 @@
 /* ------------------------------------
-   1) Skip Link
+   Skip Link
 ------------------------------------ */
 .skip-link {
     position: absolute;
@@ -17,7 +17,7 @@
 }
 
 /* ------------------------------------
-   2) Navigation (Flexbox)
+   Navigation (Flex)
 ------------------------------------ */
 .main-nav ul {
     list-style: none;
@@ -40,20 +40,18 @@
 }
 
 /* ------------------------------------
-   3) General Page Styling
+   General Styling
 ------------------------------------ */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
-
 main {
     padding: 20px;
 }
 
 /* ------------------------------------
-   4) Box Model for ALL images
+   Box Model (Images)
 ------------------------------------ */
 img {
     border: 3px solid #444;
@@ -66,44 +64,46 @@ img:hover {
 }
 
 /* ------------------------------------
-   5) Center Images on Regular Pages
+   Center Images in Home Page
 ------------------------------------ */
-main img {
+body.index-page main {
+    text-align: center;
+}
+
+body.index-page main img {
     display: block;
-    margin: 20px auto;   /* Centers the image */
-    max-width: 500px;    /* Prevents large images */
+    margin: 20px auto;
+    max-width: 500px;
 }
 
 /* ------------------------------------
-   6) Gallery Grid (Fixed + Neat)
+   Gallery Grid
 ------------------------------------ */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 
-    max-width: 650px;   /* Centers the layout and limits width */
+    max-width: 650px;
     margin: 0 auto;
 }
 
-/* Same size gallery images */
 .gallery-grid img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-/* nth-child requirement */
 .gallery-grid img:nth-child(odd) {
     border-radius: 25px;
 }
 
 /* ------------------------------------
-   7) Responsive Design (Mobile)
+   Responsive
 ------------------------------------ */
 @media (max-width: 600px) {
     .gallery-grid {
-        grid-template-columns: 1fr; /* one column */
+        grid-template-columns: 1fr;
         max-width: 100%;
     }
 
@@ -116,5 +116,3 @@ main img {
         text-align: center;
     }
 }
-
-
